@@ -2,6 +2,8 @@
 
 A C++ project structure for organizing and running LeetCode problem solutions.
 
+Here is my current leetcode profile: https://leetcode.com/u/victorsumpling/
+
 ## Project Structure
 
 ```
