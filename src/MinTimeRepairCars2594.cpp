@@ -50,6 +50,10 @@ public:
         // Example test case
         // auto result = yourSolutionMethod(params);
         // std::cout << "Result: " << result << std::endl;
+        std::vector<int> ranks = {4 ,2 ,3 ,1};
+        int cars = 10;
+        auto result = repairCars(ranks, cars);
+        std::cout << "Output " << result << std::endl;
     }
 };
 
