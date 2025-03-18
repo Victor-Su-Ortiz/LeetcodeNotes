@@ -1,14 +1,15 @@
 # PalPermutation
 
 ## Problem Description
-[PROBLEM_DESCRIPTION]
+Given a string s, return true if a permutation of the string could form a palindrome and false otherwise.
 
 ## Approach
-[DESCRIBE_YOUR_APPROACH]
+Given it is finding permutations the order does not matter but the count of characters still matters
+we need to counts the chars and ensure there is at most one odd count
 
 ## Time Complexity
-- Time Complexity: [TIME_COMPLEXITY]
-- Space Complexity: [SPACE_COMPLEXITY]
+- Time Complexity: O(n)
+- Space Complexity: O(1)
 
 ## Notes
 [ANY_ADDITIONAL_NOTES]
