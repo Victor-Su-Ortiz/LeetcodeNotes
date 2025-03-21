@@ -29,8 +29,8 @@ When using query we check if they are in the same connected component if so retu
 We can use eulers path to visit every edge at least once and have a set that keeps track of all nodes we have visited or we can use unionfind to find all node connected in a compoents while keeping track of the minPath for a connected components root.
 
 ## Time Complexity
-- Time Complexity: [TIME_COMPLEXITY]
-- Space Complexity: [SPACE_COMPLEXITY]
+- Time Complexity: O(inverse of ackermann funcion)
+- Space Complexity: O(n)
 
 ## Notes
 [ANY_ADDITIONAL_NOTES]
