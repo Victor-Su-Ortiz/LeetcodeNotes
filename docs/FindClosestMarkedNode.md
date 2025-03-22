@@ -12,6 +12,9 @@ This is either djikstra or bellman ford you can decide which to use
 djkstra is O((V+E)log(V))
 bellman is O(V*E)
 
+when bellman space O(V)
+when djkstra O(V + E)
+
 ## Time Complexity
 - Time Complexity: [TIME_COMPLEXITY]
 - Space Complexity: [SPACE_COMPLEXITY]
