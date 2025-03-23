@@ -19,15 +19,16 @@ public:
         }
 
         distances[s] = 0;
-        priority_queue<int, vector<int>, greater<int>> pq;
-        pq.push(s);
+        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+        pq.push({0, s});
         while(!pq.empty()) {
-            auto cur = pq.top();
+            auto [dist, cur] = pq.top();
             pq.pop();
+            if (dist > distances[cur]) continue;
             for (const auto& [neighbor, weight]: graph[cur]) {
-                if (distances[cur] + weight < distances[neighbor]) {
-                    distances[neighbor] = distances[cur] + weight;
-                    pq.push(neighbor);
+                if (dist + weight < distances[neighbor]) {
+                    distances[neighbor] = dist + weight;
+                    pq.push({distances[neighbor], neighbor});
                 }
             }
         }
