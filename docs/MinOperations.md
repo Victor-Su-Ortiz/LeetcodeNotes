@@ -13,7 +13,11 @@ First we need to determine what the minimum value to transform everything to. We
 For larger values you will need to scale more values up and less values down but each side will now have x and y values.
 
 proof that it is the median value.
-suppose it is not the min vlaue then there exists some value x that is closer.
+x1, x2, x3... xn
+ans = sum(abs(median - xi)) = sumL + sumR;
+when you shift median to the right by x
+sumL` = sumL + num(elements less than new median) * x
+we can think about why median has the smallest distance later.
 
 ## Time Complexity
 - Time Complexity: O(m*nlog(m*n))
