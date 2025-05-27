@@ -26,6 +26,7 @@ public:
             if (indegree[i] == 0) {
                 q.push(i);
                 distances[i][colors[i] - 'a'] = 1;
+                n--;
             }
         }
         int ans = 1;
@@ -51,7 +52,11 @@ public:
     void run() override {
         // Test cases
         std::cout << "Running test cases for LargestColorValueGraph..." << std::endl;
+        vector<vector<int>> edges = {{0,1},{0,2},{2,3},{3,4}};
+        string colors = "abaca";
         
+        int result = largestPathValue(colors, edges);
+        std::cout << "Result: " << result << std::endl;
         // Example test case
         // auto result = yourSolutionMethod(params);
         // std::cout << "Result: " << result << std::endl;
