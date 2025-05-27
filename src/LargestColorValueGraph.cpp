@@ -48,6 +48,27 @@ public:
         }
         return n != 0 ? -1 : ans;
     }
+
+    int dfs(vector<vector<int>>& graph, vector<bool>& path, vector<bool>& visited, vector<vector<int>>& distances, int cur, string& colors) {
+        if (path[cur] == true) return INT_MAX;
+        if (visited[cur] == true) return distances[cur][colors[cur] - 'a'];
+        visited[cur] = true;
+        path[cur] = true;
+        
+        for (const auto& neighbor: graph[cur]) {
+            if (dfs(graph, path, visited, distances, neighbor, colors) == INT_MAX) {
+                return INT_MAX;
+            }
+            // get the paths from the neighbor nodes
+            for (int i = 0; i < 26; i++) {
+                distances[cur][i] = max(distances[cur][i], distances[neighbor][i]);
+            }
+        }
+
+        path[cur] = false;
+        distances[cur][colors[cur] - 'a']++;
+        return distances[cur][colors[cur] - 'a'];
+    }
     
     void run() override {
         // Test cases
