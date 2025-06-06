@@ -77,7 +77,9 @@ public:
         std::cout << "Running test cases for PROBLEM_NAME=LexigraphicallySmallestRepresentation..." << std::endl;
         
         // Example test case
-        // auto result = yourSolutionMethod(params);
+        // auto result = yourSolutionMethod(params); 
+        auto ans = smallestEquivalentString("parker", "morris", "parser");
+        cout << ans << endl;
         // std::cout << "Result: " << result << std::endl;
     }
 };
@@ -85,6 +87,6 @@ public:
 // If this file is being compiled as the main solution
 #ifdef CURRENT_SOLUTION
 Solution* createSolution() {
-    return new PROBLEM_NAME=LexigraphicallySmallestRepresentationSolution();
+    return new LexigraphicallySmallestRepresentationSolution();
 }
 #endif
